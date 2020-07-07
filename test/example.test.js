@@ -1,12 +1,13 @@
 // IMPORT MODULES under test here:
 // import example from '../example.js';
-import from './guess-utils.js';
+import { compareNumbers } from './guess-utils.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('testing if this works', (expect) => {
     //Arrange
     // Set up your arguments and expectations
+    
     const expected = true;
     
     //Act 

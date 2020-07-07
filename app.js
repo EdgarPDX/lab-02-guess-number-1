@@ -3,11 +3,12 @@ import { compareNumbers } from './guess-utils.js';
 
 const myButton = document.querySelector('#button');
 const numGuess = document.querySelector('#num-guess');
+const resultSpan = document.getElementById('result');
 
 
 // initialize state
 let count = 0;
-let remaining = 4;
+let remaining = 3;
 let correctNumber = Math.ceil(Math.random() * 20);
 
 console.log(correctNumber,count,remaining);
@@ -16,26 +17,41 @@ console.log(correctNumber,count,remaining);
 
 
 myButton.addEventListener('click', () =>{
-    const guess=numGuess.value;
-    let firstguess =compareNumbers(guess, correctNumber);
-   
-    if (firstguess === 0){
-        console.log('you got it!')
-        console.log(correctNumber,count,remaining);
-
-    }else if (firstguess === -1){
-        console.log('too low, try again');
-        count++;
-        remaining --;
-        console.log(correctNumber,count,remaining);
-    }else if (firstguess === 1){
-        console.log('too high try again')
+    if (count < 3){
+    
+        const guess = Number(numGuess.value);
+        let firstguess = compareNumbers(guess, correctNumber);
+    
+        if (firstguess === 0){
+            
+            console.log(correctNumber, count, remaining);
+            resultSpan.textContent = 'you got it! the correct number was ' + correctNumber;
+            myButton.textContent = 'good job';
+            
+            myButton.disabled = true;
+        
+        } else if (firstguess === -1){
+            count++;
+            
+            
+            resultSpan.textContent = 'too low, try again.  You have ' + remaining + ' guesses remaining ';
+            myButton.textContent= "Try again";
+            remaining --;
+       
+            console.log(correctNumber,count,remaining);
+        } else if (firstguess === 1){
+            count++;
+            
+            
+            resultSpan.textContent = 'too high, try again.  You have ' + remaining + ' guesses remaining ';
+            myButton.textContent= "Try again";
+            remaining --;
+            console.log(correctNumber, count, remaining);
+  
+        }
+    } else {
+        resultSpan.textContent = 'You have reached your limit. The number was ' + correctNumber + '.  Better luck next time!';
+        myButton.textContent = 'Sorry Loser';
     }
-    count++;
-    remaining --;
-    console.log(correctNumber,count,remaining);
 
-
-
-   
 });
