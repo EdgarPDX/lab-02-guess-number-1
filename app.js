@@ -5,6 +5,7 @@ const myButton = document.querySelector('#button');
 const numGuess = document.querySelector('#num-guess');
 const resultSpan = document.getElementById('result');
 const pictureSpan = document.getElementById('picture');
+const funSpan = document.getElementById('fun');
 
 
 // initialize state
@@ -32,7 +33,7 @@ myButton.addEventListener('click', () =>{
             resultSpan.textContent = 'You got it! the correct number was ' + correctNumber + '. You got it in ' + count + ' tries!';
             myButton.textContent = 'good job';
             pictureSpan.textContent = 'Very Very Very proud of you';
-            
+            funSpan.textContent = 'That was fun, was\t it?';
             myButton.disabled = true;
             gameEnded = true;
         
@@ -66,6 +67,7 @@ myButton.addEventListener('click', () =>{
         resultSpan.textContent = 'You have reached your limit. The number was ' + correctNumber + '.  Better luck next time!';
         myButton.textContent = 'You Didnt win';
         pictureSpan.textContent = 'So very very very disappointed';
+        funSpan.textContent = 'That was fun, was\t it?';
         gameEnded = true;
     
     }
