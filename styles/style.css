@@ -17,32 +17,35 @@ html, body {
 }
 
 .header{
-    background-color: aqua;
+    background-color:greenyellow;
     font-size: 50px;
     text-align: center;
     
 }
 .button {
-    background-color: blanchedalmond;
-    font-size: 30px;
+    background-color: red;
+    font-size: 20px;
 
 
 }
-.flex-container{
-   
-    align-items: center;
+.flex-container {
+
+    display: flex;
     justify-content: center;
-    margin: 40px;
+    background-color: greenyellow;
+    
+}
+.flex-container > div {
+    background-image: url("https://eventage.net/wp-content/uploads/2018/06/Question-Mark-Background-01.jpg");
     width: 400px;
-    background-color: blanchedalmond;
-    text-align: center;
+    height: 600px;
+    margin: 10px;
+    
+    line-height: 75px;
+    font-size: 30px;
+
+}
+.footer{
     font-size: 40px;
-   
-        font-family: monospace;
-        font-size: 15px;
-        
-        text-align: left;
-        display: flex;
-        justify-content: space-around;
-        
+    text-align: center;
 }

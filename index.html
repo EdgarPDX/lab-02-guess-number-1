@@ -16,23 +16,43 @@
     <header class="header">Welcome to the Guessing App
         
     </header>
-    <div class ="flex-container">How would you like to play a guessing game? its a game about guessingl  ;im guessing you like games
-        
-           
-    </div>
-    <main><br>
-        <br>
-        <br>
+    <main>
+    <div class ="flex-container">
+        <div>
+            <b>Would you like to play a number guessing game?</b>
+                <ul>
+                    <li>Pick a number between 1 and 20</li>
+                    <li>Press the fancy button</li>
+                    <li>See how lucky you are</li>
+                    <li>You get 4 chances</li>
+                    <li>Pick well</li>
+                </ul>
+        </div>
+        <div>
             <center>
+            <span>Make your guess below </span>
+            <br>
+            <span>(if you dare)</span>
+            <br>
             <input id="num-guess" type="number" min="1" max = "20"/>
             <br>
             <button id="button" class="button">GUESS A NUMBER</button>
             <br>
-            <center><span id="result"></span>
+            <span id="picture"></span>
+            </center>
+        </div>
+        <div>
+            <span id="result"></span>
+        </div>
+
+           
+    </div>
+    
         
     </main>
-    <footer>
-       
+    <footer class="footer">
+        <span>That was fun, no?</span>
+
     </footer>
 
     <script type="module" src="app.js"></script>

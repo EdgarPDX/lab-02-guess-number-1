@@ -4,6 +4,7 @@ import { compareNumbers } from './guess-utils.js';
 const myButton = document.querySelector('#button');
 const numGuess = document.querySelector('#num-guess');
 const resultSpan = document.getElementById('result');
+const pictureSpan = document.getElementById('picture');
 
 
 // initialize state
@@ -20,15 +21,17 @@ console.log(correctNumber, count, remaining);
 myButton.addEventListener('click', () =>{
     if (!gameEnded) {
     
-    
+// Declaring the variable to pass the guessed number to the function
+// Calling function 
         const guess = Number(numGuess.value);
         let firstguess = compareNumbers(guess, correctNumber);
     
         if (firstguess === 0){
             
             console.log(correctNumber, count, remaining);
-            resultSpan.textContent = 'you got it! the correct number was ' + correctNumber;
+            resultSpan.textContent = 'You got it! the correct number was ' + correctNumber + '. You got it in ' + count + ' tries!';
             myButton.textContent = 'good job';
+            pictureSpan.textContent = 'Very Very Very proud of you';
             
             myButton.disabled = true;
             gameEnded = true;
@@ -37,7 +40,7 @@ myButton.addEventListener('click', () =>{
             
             
             
-            resultSpan.textContent = 'too low, try again.  You have ' + remaining + ' guesses remaining ';
+            resultSpan.textContent = 'Too low, try again.  You have ' + remaining + ' guesses remaining ';
             myButton.textContent= "Try again";
             
             
@@ -61,7 +64,8 @@ myButton.addEventListener('click', () =>{
         }
     }else {
         resultSpan.textContent = 'You have reached your limit. The number was ' + correctNumber + '.  Better luck next time!';
-        myButton.textContent = 'Restart';
+        myButton.textContent = 'You Didnt win';
+        pictureSpan.textContent = 'So very very very disappointed';
         gameEnded = true;
     
     }
