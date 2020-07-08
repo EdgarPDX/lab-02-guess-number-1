@@ -20,7 +20,7 @@ console.log(correctNumber, count, remaining);
 
 
 myButton.addEventListener('click', () =>{
-    if (!gameEnded) {
+    if (count < 4) {
     
 // Declaring the variable to pass the guessed number to the function
 // Calling function 
@@ -35,7 +35,7 @@ myButton.addEventListener('click', () =>{
             pictureSpan.textContent = 'Very Very Very proud of you';
             funSpan.textContent = 'That was fun, was\t it?';
             myButton.disabled = true;
-            gameEnded = true;
+           
         
         } else if (firstguess === -1){
             
@@ -48,7 +48,7 @@ myButton.addEventListener('click', () =>{
             if (count === 4) gameEnded = true;
             remaining --;
             count++;
-            console.log(correctNumber, count, remaining);
+            console.log(count, remaining);
         } else if (firstguess === 1){
             
             
@@ -60,7 +60,7 @@ myButton.addEventListener('click', () =>{
             if (count === 4) gameEnded = true;
             count++;
             remaining --;
-            console.log(correctNumber, count, remaining);
+            console.log(count, remaining);
   
         }
     }else {
@@ -68,7 +68,7 @@ myButton.addEventListener('click', () =>{
         myButton.textContent = 'You Didnt win';
         pictureSpan.textContent = 'So very very very disappointed';
         funSpan.textContent = 'That was fun, was\t it?';
-        gameEnded = true;
+       
     
     }
 
