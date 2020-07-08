@@ -8,7 +8,7 @@ const resultSpan = document.getElementById('result');
 
 // initialize state
 let count = 1;
-let remaining = 3;
+let remaining = 4;
 let correctNumber = Math.ceil(Math.random() * 20);
 let gameEnded = false;
 
@@ -18,7 +18,8 @@ console.log(correctNumber, count, remaining);
 
 
 myButton.addEventListener('click', () =>{
-    if (!gameEnded){
+    if (!gameEnded) {
+    
     
         const guess = Number(numGuess.value);
         let firstguess = compareNumbers(guess, correctNumber);
@@ -38,9 +39,10 @@ myButton.addEventListener('click', () =>{
             
             resultSpan.textContent = 'too low, try again.  You have ' + remaining + ' guesses remaining ';
             myButton.textContent= "Try again";
-            remaining --;
+            
             
             if (count === 4) gameEnded = true;
+            remaining --;
             count++;
             console.log(correctNumber, count, remaining);
         } else if (firstguess === 1){
@@ -49,17 +51,19 @@ myButton.addEventListener('click', () =>{
             
             resultSpan.textContent = 'Too high, try again.  You have ' + remaining + ' guesses remaining ';
             myButton.textContent= "Try again";
-            remaining --;
+            
             
             if (count === 4) gameEnded = true;
             count++;
+            remaining --;
             console.log(correctNumber, count, remaining);
   
         }
-    } else {
+    }else {
         resultSpan.textContent = 'You have reached your limit. The number was ' + correctNumber + '.  Better luck next time!';
-        myButton.textContent = 'Sorry Loser';
+        myButton.textContent = 'Restart';
         gameEnded = true;
+    
     }
 
 });
