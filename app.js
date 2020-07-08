@@ -17,7 +17,7 @@ console.log(correctNumber,count,remaining);
 
 
 myButton.addEventListener('click', () =>{
-    if (count < 3){
+    if (count < 4){
     
         const guess = Number(numGuess.value);
         let firstguess = compareNumbers(guess, correctNumber);
@@ -31,21 +31,22 @@ myButton.addEventListener('click', () =>{
             myButton.disabled = true;
         
         } else if (firstguess === -1){
-            count++;
+            
             
             
             resultSpan.textContent = 'too low, try again.  You have ' + remaining + ' guesses remaining ';
             myButton.textContent= "Try again";
             remaining --;
-       
+            count++;
             console.log(correctNumber,count,remaining);
         } else if (firstguess === 1){
-            count++;
             
             
-            resultSpan.textContent = 'too high, try again.  You have ' + remaining + ' guesses remaining ';
+            
+            resultSpan.textContent = 'Too high, try again.  You have ' + remaining + ' guesses remaining ';
             myButton.textContent= "Try again";
             remaining --;
+            count++;
             console.log(correctNumber, count, remaining);
   
         }

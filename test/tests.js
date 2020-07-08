@@ -1,1 +1,1 @@
-import './guess-utils.js';
+import './guess-utils.test.js';
