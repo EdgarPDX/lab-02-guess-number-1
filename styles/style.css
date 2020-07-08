@@ -28,3 +28,10 @@ html, body {
 
 
 }
+.direction{
+    margin: 40px;
+    width: 400px;
+    background-color: blanchedalmond;
+    text-align: center;
+    font-size: 40px;
+}
