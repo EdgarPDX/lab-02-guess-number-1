@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">Welcome to the Guessing App
+        
+    </header>
+    <main>
+    <div class ="flex-container">
+        <div>
+            <b>Would you like to play a number guessing game?</b>
+                <ul>
+                    <li>Pick a number between 1 and 20</li>
+                    <li>Press the fancy button</li>
+                    <li>See how lucky you are</li>
+                    <li>You get 4 chances</li>
+                    <li>Pick well</li>
+                </ul>
+        </div>
+        <div>
+            <center>
+            <span>Make your guess below </span>
+            <br>
+            <span>(if you dare)</span>
+            <br>
+            <input id="num-guess" type="number" min="1" max = "20"/>
+            <br>
+            <button id="button" class="button">GUESS A NUMBER</button>
+            <br>
+            <span id="picture"></span>
+            </center>
+        </div>
+        <div>
+            <span id="result"></span>
+        </div>
+
+           
+    </div>
+    
+        
+    </main>
+    <footer class="footer">
+        <span id="fun"></span>
+
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
