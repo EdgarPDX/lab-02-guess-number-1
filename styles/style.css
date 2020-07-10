@@ -7,7 +7,9 @@
 *{
     box-sizing: border-box;
 }
-
+main{
+    height: auto;
+}
 html, body { 
     font-family: fantasy;
     
@@ -15,7 +17,17 @@ html, body {
     height: 100%;
     width: 100%;
 }
+.flex-flex-container{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: .25fr 1fr;
+}
 
+ul{
+    display: grid;
+    justify-content: center;
+    
+}
 .header{
     background-color:greenyellow;
     font-size: 50px;
@@ -29,20 +41,22 @@ html, body {
 
 }
 .flex-container {
-
+    display: grid;
+    padding-left: 15px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: greenyellow;
     
 }
 .flex-container > div {
     background-image: url("https://eventage.net/wp-content/uploads/2018/06/Question-Mark-Background-01.jpg");
-    width: 400px;
-    height: 600px;
+    width: auto;
+    height: auto;
     margin: 10px;
-    
     line-height: 75px;
-    font-size: 30px;
+    font-size: 25px;
+    
 
 }
 .footer{
