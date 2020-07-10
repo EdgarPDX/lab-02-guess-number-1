@@ -12,9 +12,9 @@ const funSpan = document.getElementById('fun');
 let count = 1;
 let remaining = 4;
 let correctNumber = Math.ceil(Math.random() * 20);
-let gameEnded = false;
 
-console.log(correctNumber, count, remaining);
+
+//console.log(correctNumber, count, remaining);
 
 // set event listeners to update state and DOM
 
@@ -29,7 +29,7 @@ myButton.addEventListener('click', () =>{
     
         if (firstguess === 0){
             
-            console.log(correctNumber, count, remaining);
+            //console.log(correctNumber, count, remaining);
             resultSpan.textContent = 'You got it! the correct number was ' + correctNumber + '. You got it in ' + count + ' tries!';
             myButton.textContent = 'good job';
             pictureSpan.textContent = 'Very Very Very proud of you';
@@ -42,32 +42,32 @@ myButton.addEventListener('click', () =>{
             
             
             resultSpan.textContent = 'Too low, try again.  You have ' + remaining + ' guesses remaining ';
-            myButton.textContent= "Try again";
+            myButton.textContent = 'Try again';
             
             
-            if (count === 4) gameEnded = true;
+            if (count === 4);
             remaining --;
             count++;
-            console.log(count, remaining);
+            //console.log(count, remaining);
         } else if (firstguess === 1){
             
             
             
             resultSpan.textContent = 'Too high, try again.  You have ' + remaining + ' guesses remaining ';
-            myButton.textContent= "Try again";
+            myButton.textContent = 'Try again';
             
             
-            if (count === 4) gameEnded = true;
+            if (count === 4);
             count++;
             remaining --;
-            console.log(count, remaining);
+            //console.log(count, remaining);
   
         }
-    }else {
+    } else {
         resultSpan.textContent = 'You have reached your limit. The number was ' + correctNumber + '.  Better luck next time!';
         myButton.textContent = 'You Didnt win';
         pictureSpan.textContent = 'So very very very disappointed';
-        funSpan.textContent = 'That was fun, was\t it?';
+        funSpan.textContent = 'That was fun, was it not?';
        
     
     }
